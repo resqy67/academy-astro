@@ -1,0 +1,81 @@
+---
+// import the Image component and the image
+import { Image } from "astro:assets";
+import darkImage from "../assets/cta-dashboard-mockup-dark.svg";
+import lightImage from "../assets/cta-dashboard-mockup.svg";
+const title = "Apa Itu Mikrotik Academy?";
+const body =
+  "MikroTik Academy adalah sebuah program yang disiapkan untuk jalur pendidikan, yaitu Politeknik / universitas / Kampus kejuruan dan sejenisnya untuk mepelajari MikroTik. Kelas MikroTik akan banyak menggunakan LAB-Komputer layaknya pelatihan atau sertifikasi dan akan terdapat ujian untuk mengukur seberapa jauh kemampuan yang di miliki Siswa/Siswi. Tujuan dari MikroTik Academy adalah SMK dapat mengadopsi kurikulum MTCNA kedalam kegiatan belajar mengajar serta memberi nilai tambah bagi Siswa/Siswi dan bila disetujui SMK dapat mengadakan Sertifikasi Internasional.";
+---
+
+<section class="mb-12 bg-stone-100 dark:bg-slate-800">
+  <div
+    class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6"
+  >
+    <Image
+      src={darkImage}
+      class="w-full hidden dark:block"
+      alt="A description of my image."
+    />
+    <Image
+      src={lightImage}
+      class="w-full dark:hidden border-solid border-2"
+      alt="A description of my image."
+    />
+    <!-- <img class="w-full dark:hidden border-solid border-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg" alt="dashboard image">
+        <img class="w-full hidden dark:block" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup-dark.svg" alt="dashboard image"> -->
+    <div class="mt-4 md:mt-0">
+      <h2
+        class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+      >
+        {title}
+      </h2>
+      <p class="mb-8 mt-2 text-lg text-gray-700 dark:text-gray-400">{body}</p>
+    </div>
+  </div>
+
+  <div>
+    <div class="max-w-screen-xl px-4 py-12 mx-auto sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2
+          class="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl"
+        >
+          <span class="block">Apa itu MTCNA</span>
+          <!-- <span class="block">Start your free trial today.</span> -->
+        </h2>
+        <p
+          class="mt-4 text-lg leading-6 text-justify text-gray-700 dark:text-gray-400"
+        >
+          MTCNA adalah sertifikasi dasar dari Mikrotik yang menguji pengetahuan
+          dasar tentang Mikrotik RouterOS dan konfigurasi perangkat keras
+          Mikrotik. Sertifikasi ini merupakan prasyarat untuk mengikuti
+          sertifikasi Mikrotik lainnya. Sertifikasi ini tidak memiliki masa
+          berlaku dan tidak perlu diperbarui. Sertifikasi ini dapat diambil oleh
+          siapa saja yang ingin mempelajari Mikrotik RouterOS. Sertifikasi ini
+          terdiri dari 1 modul ujian yang harus diselesaikan dalam waktu 1,5
+          jam. Ujian ini terdiri dari 60 pertanyaan pilihan ganda dan
+          membutuhkan skor minimal 60% untuk lulus. Ujian ini dapat diambil di
+          pusat ujian resmi Mikrotik atau di tempat ujian yang diselenggarakan
+          oleh trainer Mikrotik yang bersertifikasi MTCNA. Ujian ini dapat
+          diambil dalam bahasa Inggris, Rusia, dan Spanyol. Ujian ini dapat
+          diambil secara online atau offline. Ujian online dapat diambil di mana
+          saja dengan menggunakan koneksi internet yang stabil. Ujian offline
+          dapat diambil di tempat ujian yang diselenggarakan oleh trainer
+          Mikrotik yang bersertifikasi MTCNA. Ujian offline dapat diambil secara
+          individu atau kelompok. Ujian offline dapat diambil dengan menggunakan
+          perangkat laptop atau desktop yang sudah terpasang Mikrotik RouterOS.
+          Ujian offline dapat diambil dengan menggunakan perangkat laptop atau
+          desktop yang sudah terpasang Mikrotik RouterOS. Ujian offline dapat
+          diambil dengan menggunakan perangkat laptop atau desktop yang sudah
+          terpasang Mikrotik RouterOS.
+        </p>
+        <!-- <a
+          href="#"
+          class="inline-flex items-center justify-center w-full px-5 py-3 mt-8 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 sm:w-auto"
+        >
+          Sign up for free
+        </a> -->
+      </div>
+    </div>
+  </div>
+</section>

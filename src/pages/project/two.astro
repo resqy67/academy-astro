@@ -1,0 +1,22 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import HeaderSmall from "../../components/HeaderSmall.astro";
+
+import Table from "../../components/Table.astro";
+const title = "Jadwal Training";
+const subtitle = "Kegiatan Training yang akan datang";
+---
+
+<Layout title="Project 2">
+  <div class="mb-12">
+    <HeaderSmall title={title} subtitle={subtitle} />
+  </div>
+  <main>
+    <div class="mb-12">
+      <Table />
+    </div>
+  </main>
+</Layout>
+
+<style></style>

@@ -1,0 +1,53 @@
+---
+import Heading from "./Heading.astro";
+
+const heading = "Layanan Mikrotik Academy Skarla";
+const subheading =
+  "Maju bersama dengan keahlian yang mumpuni menghadapi dunia industri!";
+
+const sections = [
+  "Sertifikasi MTCNA Mikrotik",
+  "Integrasi Kurikulum",
+  "Dunia industri",
+  // "Analytics",
+  // "Content Creation",
+  // "Custom React Components",
+];
+const sectionsText = [
+  "Memberikan layanan pelatihan intensif dan sertifikasi MTCNA Mikrotik sebagai pendamping Ijazah bagi Siswa/siswi SMK.",
+  "Kurikulum MTCNA terintegrasi dengan kurikulum SMK.",
+  "Membantu sekolah dalam mengintegrasikan kurikulum dengan dunia industri.",
+  // "Using analytics tools like Google Analytics, I can help you track your site's performance and make improvements.",
+  // "I've been using Adobe products for over 10 years. I can help you create content for your site, social media, and even custom YouTube videos.",
+  // "Need something more custom for an app? I can help you build custom React components for your project.",
+];
+---
+
+<div class="bg-stone-100 dark:bg-slate-800">
+  <div class="py-8 px-4 text-center max-w-screen-xl sm:py-16 lg:px-6">
+    <Heading heading={heading} />
+    <p class="mt-2 mb-6 text-m text-gray-700 dark:text-gray-400">
+      {subheading}
+    </p>
+    <div
+      class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0"
+    >
+      {
+        sections.map((section) => {
+          return (
+            <div class="flex flex-col">
+              <div class="mt-6">
+                <h3 class="text-lg font-medium text-gray-900 dark:text-white">
+                  {sections[sections.indexOf(section)]}
+                </h3>
+                <p class="mb-8 mt-2 text-lg text-gray-700 dark:text-gray-400">
+                  {sectionsText[sections.indexOf(section)]}
+                </p>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</div>

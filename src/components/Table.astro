@@ -1,0 +1,82 @@
+---
+const heading = ["Materi", "Tempat", "Durasi", "Tanggal", "Status"];
+
+const data = [
+  {
+    name: "Training Mikrotik MTCNA",
+    tempat: "SMKS Airlangga Balikpapan (Lab TKJ)",
+    durasi: "2 Hari ( 07.00 - 16.00 )",
+    tanggal: "17 November 2022",
+    status: "Sudah Selesai",
+  },
+  {
+    name: "Training Mikrotik MTCNA",
+    tempat: "SMKS Airlangga Balikpapan (Lab TKJ)",
+    durasi: "2 Hari ( 07.00 - 16.00 )",
+    tanggal: "17 November 2022",
+    status: "Sudah Selesai",
+  },
+  {
+    name: "Training Mikrotik MTCNA",
+    tempat: "SMKS Airlangga Balikpapan (Lab TKJ)",
+    durasi: "2 Hari ( 07.00 - 16.00 )",
+    tanggal: "17 November 2022",
+    status: "Sudah Selesai",
+  },
+  {
+    name: "Training Mikrotik MTCNA",
+    tempat: "SMKS Airlangga Balikpapan (Lab TKJ)",
+    durasi: "2 Hari ( 07.00 - 16.00 )",
+    tanggal: "17 November 2022",
+    status: "Sudah Selesai",
+  },
+  {
+    name: "Training Mikrotik MTCNA",
+    tempat: "SMKS Airlangga Balikpapan (Lab TKJ)",
+    durasi: "2 Hari ( 07.00 - 16.00 )",
+    tanggal: "17 November 2022",
+    status: "Sudah Selesai",
+  },
+  {
+    name: "Training Mikrotik MTCNA",
+    tempat: "SMKS Airlangga Balikpapan (Lab TKJ)",
+    durasi: "2 Hari ( 07.00 - 16.00 )",
+    tanggal: "17 November 2022",
+    status: "Sudah Selesai",
+  },
+];
+---
+
+<div class="relative overflow-x-auto">
+  <table class="w-full text-sm text-left text-gray-700 dark:text-gray-400">
+    <thead
+      class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+    >
+      {
+        heading.map((item) => (
+          <th scope="col" class="px-6 py-3">
+            {item}
+          </th>
+        ))
+      }
+    </thead>
+    <tbody>
+      {
+        data.map((item) => (
+          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <th
+              scope="row"
+              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            >
+              {item.name}
+            </th>
+            <td class="px-6 py-4">{item.tempat}</td>
+            <td class="px-6 py-4">{item.durasi}</td>
+            <td class="px-6 py-4">{item.tanggal}</td>
+            <td class="px-6 py-4">{item.status}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>
