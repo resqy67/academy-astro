@@ -1,50 +1,9 @@
 ---
 const heading = ["Materi", "Tempat", "Durasi", "Tanggal", "Status"];
-
-const data = [
-  {
-    name: "Training Mikrotik MTCNA",
-    tempat: "SMKS Airlangga Balikpapan (Lab TKJ)",
-    durasi: "2 Hari ( 07.00 - 16.00 )",
-    tanggal: "17 November 2022",
-    status: "Sudah Selesai",
-  },
-  {
-    name: "Training Mikrotik MTCNA",
-    tempat: "SMKS Airlangga Balikpapan (Lab TKJ)",
-    durasi: "2 Hari ( 07.00 - 16.00 )",
-    tanggal: "17 November 2022",
-    status: "Sudah Selesai",
-  },
-  {
-    name: "Training Mikrotik MTCNA",
-    tempat: "SMKS Airlangga Balikpapan (Lab TKJ)",
-    durasi: "2 Hari ( 07.00 - 16.00 )",
-    tanggal: "17 November 2022",
-    status: "Sudah Selesai",
-  },
-  {
-    name: "Training Mikrotik MTCNA",
-    tempat: "SMKS Airlangga Balikpapan (Lab TKJ)",
-    durasi: "2 Hari ( 07.00 - 16.00 )",
-    tanggal: "17 November 2022",
-    status: "Sudah Selesai",
-  },
-  {
-    name: "Training Mikrotik MTCNA",
-    tempat: "SMKS Airlangga Balikpapan (Lab TKJ)",
-    durasi: "2 Hari ( 07.00 - 16.00 )",
-    tanggal: "17 November 2022",
-    status: "Sudah Selesai",
-  },
-  {
-    name: "Training Mikrotik MTCNA",
-    tempat: "SMKS Airlangga Balikpapan (Lab TKJ)",
-    durasi: "2 Hari ( 07.00 - 16.00 )",
-    tanggal: "17 November 2022",
-    status: "Sudah Selesai",
-  },
-];
+const response = await fetch('https://api.apispreadsheets.com/data/cqNmVxsmPKIhbPiv/');
+const dataa = await response.json();
+const data = dataa.data;
+console.log(data);
 ---
 
 <div class="relative overflow-x-auto">
@@ -62,16 +21,16 @@ const data = [
     </thead>
     <tbody>
       {
-        data.map((item) => (
+        Array.isArray(data) && data.map((item: {materi: string; tempat: string, waktu: string, tanggal: string, status: string}) => (
           <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
             <th
               scope="row"
               class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              {item.name}
+              {item.materi}
             </th>
             <td class="px-6 py-4">{item.tempat}</td>
-            <td class="px-6 py-4">{item.durasi}</td>
+            <td class="px-6 py-4">{item.waktu}</td>
             <td class="px-6 py-4">{item.tanggal}</td>
             <td class="px-6 py-4">{item.status}</td>
           </tr>
