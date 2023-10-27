@@ -1,18 +1,22 @@
 ---
+import { Image } from 'astro:assets';
+import gambar from '../assets/img/trainer.jpg';
 interface Props {
   title: string;
   body: string;
-  image: string;
+  // image: string;
+  // image: ImageMetadata;
 }
 
-const { title, body, image } = Astro.props;
+const { title, body} = Astro.props;
 ---
 
 <div
   class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
 >
   <div class="mb-4 relative mx-auto h-64 w-64 overflow-hidden">
-    <img class="w-full rounded-lg object-cover" src={image} alt={title} />
+    <!-- <img class="w-full rounded-lg object-cover" src={image} alt={title} /> -->
+    <Image src={gambar} class="w-full rounded-lg object-cover" alt={title} />
   </div>
   <h5
     class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"

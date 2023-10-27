@@ -1,13 +1,11 @@
 ---
 import Card from "./Card.astro";
 import Heading from "./Heading.astro";
-import gambar from "../src/assets/img/trainer.jpg";
 
 const heading = "Trainer/Instruktur";
 const subHeading =
   "Mikrotik Academy Skarla memiliki instruktur yang telah tersertifikasi Mikrotik!";
 const titlee = "Maradona";
-const imagee = "../src/assets/img/trainer.jpg";
 const bodyy = "MTCRE , MTCNA";
 ---
 
@@ -20,7 +18,7 @@ const bodyy = "MTCRE , MTCNA";
   </div>
   <div class="flex justify-center text-center bg-stone-100 dark:bg-slate-800">
     <div class="py-8 px-4 lg:px-6">
-      <Card title={titlee} body={bodyy} image={imagee} />
+      <Card title={titlee} body={bodyy}/>
     </div>
   </div>
 </div>
