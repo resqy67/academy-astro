@@ -1,44 +1,65 @@
+---
+import { Image } from "astro:assets";
+import gambar1 from "../assets/img/1.jpg";
+import gambar2 from "../assets/img/2.jpg";
+import gambar3 from "../assets/img/3.jpg";
+import gambar4 from "../assets/img/4.jpg";
+import gambar5 from "../assets/img/5.jpg";
+import gambar6 from "../assets/img/9.jpg";
+
+---
+
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
   <div>
-    <img
+    <!-- <img
       class="h-auto max-w-full rounded-lg"
       src="../src/assets/img/1.jpg"
       alt=""
-    />
+    /> -->
+    <Image src={gambar1} class="h-auto max-w-full rounded-lg" alt="" />
   </div>
   <div>
-    <img
+    <Image src={gambar2} class="h-auto max-w-full rounded-lg" alt="" />
+    <!-- <img
       class="h-auto max-w-full rounded-lg"
       src="../src/assets/img/2.jpg"
       alt=""
-    />
+    /> -->
   </div>
   <div>
-    <img
+    <Image src={gambar3} class="h-auto max-w-full rounded-lg" alt="" />
+
+    <!-- <img
       class="h-auto max-w-full rounded-lg"
       src="../src/assets/img/3.jpg"
       alt=""
-    />
+    /> -->
   </div>
   <div>
-    <img
+    <Image src={gambar4} class="h-auto max-w-full rounded-lg" alt="" />
+
+    <!-- <img
       class="h-auto max-w-full rounded-lg"
       src="../src/assets/img/4.jpg"
       alt=""
-    />
+    /> -->
   </div>
   <div>
-    <img
+    <Image src={gambar5} class="h-auto max-w-full rounded-lg" alt="" />
+
+    <!-- <img
       class="h-auto max-w-full rounded-lg"
       src="../src/assets/img/5.jpg"
       alt=""
-    />
+    /> -->
   </div>
   <div>
-    <img
+    <Image src={gambar6} class="h-auto max-w-full rounded-lg" alt="" />
+
+    <!-- <img
       class="h-auto max-w-full rounded-lg"
       src="../src/assets/img/9.jpg"
       alt=""
-    />
+    /> -->
   </div>
 </div>
