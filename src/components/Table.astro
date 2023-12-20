@@ -1,9 +1,11 @@
 ---
 const heading = ["Materi", "Tempat", "Durasi", "Tanggal", "Status"];
-const response = await fetch('https://api.apispreadsheets.com/data/cqNmVxsmPKIhbPiv/');
-const dataa = await response.json();
-const data = dataa.data;
-console.log(data);
+
+interface Props {
+  data: []
+}
+
+const { data } = Astro.props;
 ---
 
 <div class="relative overflow-x-auto">
